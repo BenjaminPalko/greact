@@ -1,0 +1,2 @@
+[install.scopes]
+baobeld = { url = "https://git.palko.ca/api/packages/baobeld/npm/", token = "$NPM_TOKEN" }
