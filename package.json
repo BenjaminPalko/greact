@@ -3,6 +3,9 @@
   "module": "index.ts",
   "type": "module",
   "devDependencies": {
+    "@girs/gio-2.0": "^2.84.0-4.0.0-beta.23",
+    "@girs/gjs": "^4.0.0-beta.23",
+    "@girs/gtk-4.0": "^4.18.3-4.0.0-beta.23",
     "@types/bun": "latest"
   },
   "peerDependencies": {
