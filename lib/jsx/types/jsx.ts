@@ -1,4 +1,6 @@
-export type RenderedNode = object;
+import type { JSX } from "@lib/jsx/jsx-runtime";
+
+export type RenderedNode = JSX.Element;
 
 export type JSXNode =
 	| RenderedNode

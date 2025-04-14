@@ -1,14 +1,16 @@
 import { renderJSX } from "./render";
-import type { JSXChildren, RenderedNode } from "./types";
+import type { GtkElements, GtkTag, JSXChildren } from "./types";
+import type GObject20 from "gi://GObject?version=2.0";
 
 namespace JSX {
-	export type Attributes = Record<string, unknown> & JSXChildren;
 	// Allow any html tag
-	export type IntrinsicElements = Record<string, Attributes>;
+	export type IntrinsicElements = {
+		[T in GtkTag]: GtkElements[T] & JSXChildren;
+	};
 
 	// Declare the shape of JSX rendering result
 	// This is required so the return types of components can be inferred
-	export type Element = RenderedNode;
+	export type Element = GObject20.Object & {};
 }
 
 // Expose the main namespace
