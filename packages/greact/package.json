@@ -1,0 +1,47 @@
+{
+	"name": "@baobeld/greact",
+	"type": "module",
+	"version": "1.0.0",
+	"types": "dist/index.d.ts",
+	"exports": {
+		".": {
+			"require": "./dist/index.cjs",
+			"import": "./dist/index.js"
+		},
+		"./jsx-runtime": {
+			"types": "./dist/jsx/jsx-runtime.d.ts",
+			"require": "./dist/jsx/jsx-runtime.cjs",
+			"import": "./dist/jsx/jsx-runtime.js"
+		},
+		"./jsx-dev-runtime": {
+			"types": "./dist/jsx/jsx-dev-runtime.d.ts"
+		}
+	},
+	"files": [
+		"!dist/**/*.spec.*",
+		"!dist/**/*.test.*",
+		"!dist/**/*.stories.*",
+		"dist"
+	],
+	"scripts": {
+		"dev": "",
+		"build": "vite build",
+		"check": "biome check --write **/*",
+		"format": "biome format --write **/*",
+		"lint": "biome lint --write **/*",
+		"test": "vitest",
+		"prepublish": "bun run check"
+	},
+	"devDependencies": {
+		"vite": "^6.2.6",
+		"vite-plugin-dts": "^4.5.3",
+		"vite-tsconfig-paths": "^5.1.4",
+		"vitest": "^3.1.1"
+	},
+	"peerDependencies": {
+		"@girs/gio-2.0": "^2.84.0-4.0.0-beta.23",
+		"@girs/gjs": "^4.0.0-beta.23",
+		"@girs/glib-2.0": "^2.84.0-4.0.0-beta.23",
+		"@girs/gtk-4.0": "^4.18.3-4.0.0-beta.23"
+	}
+}

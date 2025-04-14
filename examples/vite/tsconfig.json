@@ -1,0 +1,36 @@
+{
+	"compilerOptions": {
+		// Enable latest features
+		"lib": ["ESNext", "DOM"],
+		"target": "ESNext",
+		"module": "ESNext",
+		"moduleDetection": "force",
+		"types": [
+			"@baobeld/greact",
+			"@girs/gjs",
+			"@girs/gtk-4.0",
+			"@girs/gio-2.0",
+			"@girs/glib-2.0"
+		],
+		"jsx": "react-jsx",
+		"jsxImportSource": "@baobeld/greact",
+		"allowJs": true,
+
+		// Bundler mode
+		"moduleResolution": "bundler",
+		"allowImportingTsExtensions": true,
+		"verbatimModuleSyntax": true,
+		"noEmit": true,
+
+		// Best practices
+		"strict": true,
+		"skipLibCheck": true,
+		"noFallthroughCasesInSwitch": true,
+
+		// Some stricter flags (disabled by default)
+		"noUnusedLocals": false,
+		"noUnusedParameters": false,
+		"noPropertyAccessFromIndexSignature": false
+	},
+	"exclude": ["node_modules", "dist"]
+}
