@@ -9,6 +9,7 @@ export default defineConfig({
 		tsconfigpaths(),
 		dts({
 			insertTypesEntry: true,
+			exclude: ["test"],
 		}),
 	],
 	build: {
@@ -38,6 +39,7 @@ export default defineConfig({
 				preserveModules: true,
 			},
 		},
+		minify: false,
 		cssMinify: false,
 	},
 	test: {

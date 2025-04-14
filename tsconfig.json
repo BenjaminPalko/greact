@@ -6,7 +6,13 @@
 		"module": "ESNext",
 		"allowJs": true,
 
-		"types": ["vitest/globals"],
+		"types": [
+			"vitest/globals",
+			"@girs/gjs",
+			"@girs/gtk-4.0",
+			"@girs/gio-2.0",
+			"@girs/glib-2.0"
+		],
 		// JSX
 		"jsx": "react-jsx",
 		"jsxImportSource": "@lib/jsx",
@@ -19,6 +25,7 @@
 		// Aliases
 		"baseUrl": ".",
 		"paths": {
+			"@lib": ["./lib/"],
 			"@lib/*": ["./lib/*"]
 		},
 
