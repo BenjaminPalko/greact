@@ -1,6 +1,6 @@
+import type GObject20 from "gi://GObject?version=2.0";
 import { renderJSX } from "./render";
 import type { GtkElements, GtkTag, JSXChildren } from "./types";
-import type GObject20 from "gi://GObject?version=2.0";
 
 namespace JSX {
 	// Allow any html tag
